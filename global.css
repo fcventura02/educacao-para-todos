@@ -1,0 +1,49 @@
+[data-scroll] {
+  transition: opacity 1s;
+}
+[data-scroll="in"] {
+  opacity: 1;
+}
+[data-scroll="out"] {
+  opacity: 0;
+}
+
+:root {
+  --gray-50: #ecf0f1;
+  --gray-200: #bdc3c7;
+  --gray-500: #95a5a6;
+  --gray-700: #7f8c8d;
+  --black: #34495e;
+  --yellow-50: #f1c40f;
+  --yellow-200: #f39c12;
+  --yellow-500: #e67e22;
+  --yellow-700: #d35400;
+  --green-50: #1abc9c;
+  --green-200: #16a085;
+  --green-500: #2ecc71;
+  --green-700: #27ae60;
+  --red: #e74c3c;
+  --blue: #21569c;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--gray-50);
+  color: var(--black);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
