@@ -17,6 +17,7 @@ header .containner {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 1px solid var(--yellow-50);
 }
 
 header .containner img {
@@ -78,18 +79,29 @@ header .containner nav a:hover::after {
 
 footer {
   padding: 15px 0;
+  border-top: 1px solid var(--yellow-50);
+  -webkit-box-shadow: 1px 1px 5px var(--yellow-50);
+          box-shadow: 1px 1px 5px var(--yellow-50);
+}
+
+footer .containner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-footer p a {
+footer .containner p {
+  text-align: center;
+}
+
+footer .containner p a {
   color: var(--blue);
   font-weight: bold;
 }
