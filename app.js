@@ -6,7 +6,6 @@ ScrollOut({
   once: true,
   onShown: function (el) {
     const div = el.children;
-    console.log(el);
     if (el.classList[0] === "plataforma-item") {
       el.classList.add("animate__animated");
       el.classList.add("animate__flipInX");
@@ -16,6 +15,11 @@ ScrollOut({
         iterator.classList.add("animate__animated");
         iterator.classList.add("animate__bounce");
       }
+    }
+    if (el.id === "problema" || el.id === "solucao") {
+      console.log( div[0]?.children)
+      div[0]?.children[0]?.classList.add("animate-openLoad");
+      div[0]?.children[1]?.classList.add("animate-openLoad");
     }
   },
 });
