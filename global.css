@@ -1,13 +1,12 @@
-[data-scroll] {
+[data-scroll]{
   transition: opacity 1s;
 }
-[data-scroll="in"] {
+[data-scroll="in"]{
   opacity: 1;
 }
-[data-scroll="out"] {
+[data-scroll="out"]{
   opacity: 0;
 }
-
 :root {
   --gray-50: #ecf0f1;
   --gray-200: #bdc3c7;

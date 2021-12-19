@@ -17,9 +17,12 @@ ScrollOut({
       }
     }
     if (el.id === "problema" || el.id === "solucao") {
-      console.log( div[0]?.children)
-      div[0]?.children[0]?.classList.add("animate-openLoad");
-      div[0]?.children[1]?.classList.add("animate-openLoad");
+      for (const element of div) {
+        if (element.classList[0] != "divider") {
+          element.children[0]?.classList.add("animate-openLoad");
+          element.children[1]?.classList.add("animate-openLoad");
+        }
+      }
     }
   },
 });
