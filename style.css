@@ -30,22 +30,21 @@ header .container img {
 header .container nav a {
   font-size: 1.2rem;
   padding: 6px;
-  color: var(--blue);
+  color: var(--blue-700);
   -webkit-transition: color .3s ease-in;
   transition: color .3s ease-in;
   position: relative;
 }
 
 header .container nav a:hover {
-  -webkit-filter: grayscale(0.5);
-          filter: grayscale(0.5);
+  color: var(--blue-600);
 }
 
 header .container nav a:hover::after {
   content: "";
   width: 100%;
   height: 2px;
-  background: var(--blue);
+  background: var(--blue-600);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -105,8 +104,14 @@ footer .container p {
 }
 
 footer .container p a {
-  color: var(--blue);
+  color: var(--blue-700);
   font-weight: bold;
+  -webkit-transition: color .3s ease-in;
+  transition: color .3s ease-in;
+}
+
+footer .container p a:hover {
+  color: var(--blue-600);
 }
 
 .banner {
@@ -453,6 +458,7 @@ footer .container p a {
 
 .loader {
   position: fixed;
+  overflow: hidden;
   z-index: 999;
   top: 0;
   left: 0;
@@ -485,7 +491,7 @@ footer .container p a {
   left: 0;
   width: 0;
   height: 20%;
-  background-color: var(--blue);
+  background-color: var(--blue-700);
   -webkit-transition: width .7s ease;
   transition: width .7s ease;
 }
@@ -527,6 +533,7 @@ footer .container p a {
 }
 
 .loader--active {
+  display: block;
   width: 100%;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
@@ -570,5 +577,141 @@ footer .container p a {
 .loader--active .loader__tile:nth-child(5) {
   -webkit-transition-delay: 0.8s;
           transition-delay: 0.8s;
+}
+
+#contact {
+  padding: 100px 0;
+  position: relative;
+  color: var(--blue-700);
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./assets/img/books.jpg") fixed;
+  -webkit-filter: grayscale(100%) contrast(0.5);
+          filter: grayscale(100%) contrast(0.5);
+  z-index: -1;
+}
+
+#contact .divider {
+  margin-top: -100px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#contact .divider:nth-child(3) {
+  bottom: 0px;
+  margin-top: 0;
+}
+
+#contact .container {
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+
+#contact .container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
+
+#contact .container form .input {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  position: relative;
+  padding-top: 10px;
+}
+
+#contact .container form .input + .input {
+  margin-top: 15px;
+}
+
+#contact .container form .input .input_label {
+  color: var(--blue-700);
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+#contact .container form .input .input_field {
+  z-index: 1;
+  background-color: transparent;
+  color: var(--blue-700);
+  border-bottom: 2px solid var(--blue-700);
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+#contact .container form .input .input_field:focus, #contact .container form .input .input_field:not(:placeholder-shown) {
+  border-bottom-color: var(--blue-600);
+}
+
+#contact .container form .input .input_field:not(:placeholder-shown):invalid, #contact .container form .input .input_field:not(:placeholder-shown):invalid ~ .input_label {
+  border-bottom-color: var(--red);
+}
+
+#contact .container form .input .input_field:not(:placeholder-shown):invalid ~ .input_label {
+  color: var(--red);
+}
+
+#contact .container form .input .input_field:focus ~ .input_label,
+#contact .container form .input .input_field:not(:placeholder-shown) ~ .input_label {
+  color: var(--blue-600);
+  -webkit-transform: translateY(-25px) translateX(0px) scale(0.9);
+          transform: translateY(-25px) translateX(0px) scale(0.9);
+}
+
+#contact .container form .submit {
+  width: 100%;
+  height: 50px;
+  max-width: 320px;
+  margin-top: 28px;
+  background-color: var(--blue-700);
+  border-radius: 3px;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #eee;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: background .3s ease-in;
+  transition: background .3s ease-in;
+}
+
+#contact .container form .submit:disabled {
+  cursor: not-allowed;
+}
+
+#contact .container form .submit:not(:disabled):hover {
+  background-color: var(--blue-600);
+}
+
+#contact .container form .submit .disabled {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

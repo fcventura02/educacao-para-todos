@@ -12,11 +12,14 @@
   --gray-200: #bdc3c7;
   --gray-700: #7f8c8d;
   --black: #34495e;
+  --black-700: #000814;
   --yellow-50: #f1c40f;
   --green-50: #1abc9c;
   --green-200: #16a085;
   --red: #e74c3c;
-  --blue: #21569c;
+  --blue-50: #90e0ef;
+  --blue-600: #0077b6;
+  --blue-700: #023e8a;
 }
 
 * {
@@ -39,4 +42,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+input, textarea{
+  border: none;
+  outline: none;
+  background: none;
 }
