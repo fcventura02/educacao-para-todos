@@ -27,20 +27,88 @@ header .container img {
   width: 50px;
 }
 
-header .container nav a {
-  font-size: 1.2rem;
-  padding: 6px;
-  color: var(--blue-700);
-  -webkit-transition: color .3s ease-in;
-  transition: color .3s ease-in;
-  position: relative;
+header .container .menu button {
+  background: none;
+  border: none;
 }
 
-header .container nav a:hover {
+@media (min-width: 620px) {
+  header .container .menu button {
+    display: none;
+  }
+}
+
+header .container .menu button svg {
+  color: var(--blue-700);
+  fill: currentColor;
+  -webkit-transition: color .3s ease-in;
+  transition: color .3s ease-in;
+}
+
+header .container .menu button svg:hover {
   color: var(--blue-600);
 }
 
-header .container nav a:hover::after {
+header .container .menu nav {
+  display: none;
+}
+
+@media (min-width: 620px) {
+  header .container .menu nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+header .container .menu nav.activit {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 6px;
+  position: absolute;
+  top: 63px;
+  right: 0;
+  background: white;
+  z-index: 20;
+}
+
+header .container .menu nav a {
+  font-size: 1.2rem;
+  padding: 6px;
+  color: var(--blue-700);
+  -webkit-transition: color .3s ease-in, background .3s ease-in, -webkit-transform .3s ease-in;
+  transition: color .3s ease-in, background .3s ease-in, -webkit-transform .3s ease-in;
+  transition: color .3s ease-in, background .3s ease-in, transform .3s ease-in;
+  transition: color .3s ease-in, background .3s ease-in, transform .3s ease-in, -webkit-transform .3s ease-in;
+  position: relative;
+}
+
+header .container .menu nav a:last-child {
+  border-radius: 3px;
+  padding: 6px;
+  margin-left: 3px;
+  color: var(--gray-50);
+  background: var(--blue-700);
+  text-align: center;
+}
+
+header .container .menu nav a:last-child:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  background: var(--blue-600);
+}
+
+header .container .menu nav a:not(:last-child):hover {
+  color: var(--blue-600);
+}
+
+header .container .menu nav a:not(:last-child):hover:after {
   content: "";
   width: 100%;
   height: 2px;

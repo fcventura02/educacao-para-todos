@@ -70,11 +70,52 @@
           src="./assets/img/logo.svg"
           alt="logo educação"
         />
-        <nav>
-          <a href="#problem">Problema</a>
-          <a href="#solution">Solução</a>
-          <a href="#platform">Plataforma</a>
-        </nav>
+        <div class="menu">
+          <button id="hamburguer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="30"
+              height="30"
+              viewBox="0 0 172 172"
+            >
+              <g
+                fill="none"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                style="mix-blend-mode: normal"
+              >
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="currentColor">
+                  <path
+                    d="M17.2,40.13333c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,
+                      1.78592 2.96558,2.87225 5.03322,2.843h137.6c2.06765,0.02924 3.99087,-1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,
+                      -3.99474 0,-5.78066c-1.04236,-1.78592 -2.96558,-2.87225 -5.03322,-2.843zM17.2,80.26667c-2.06765,-0.02924 -3.99087,
+                      1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,
+                      2.843h137.6c2.06765,0.02924 3.99087,-1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,-3.99474 0,-5.78066c-1.04236,
+                      -1.78592 -2.96558,-2.87225 -5.03322,-2.843zM17.2,120.4c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,
+                      1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,2.843h137.6c2.06765,0.02924 3.99087,
+                      -1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,-3.99474 0,-5.78066c-1.04236,-1.78592 -2.96558,-2.87225 -5.03322,
+                      -2.843z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </button>
+          <nav id="menu-list" class="list">
+            <a href="#problem">Problema</a>
+            <a href="#solution">Solução</a>
+            <a href="#platform">Plataforma</a>
+            <a href="#contact">Contato</a>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
@@ -523,7 +564,7 @@
             <input type="hidden" name="_next" value="http://127.0.0.1:5500/" />
             <input type="hidden" name="_subject" value="Educação para todos." />
 
-            <input type="submit" class="submit" value="Enviar"/>
+            <input type="submit" class="submit" value="Enviar" />
           </form>
         </div>
       </section>
@@ -606,8 +647,9 @@
       <div class="loader__tile"></div>
     </div>
 
-    <script defer src="./app.js"></script>
-    <script src="./loading.js"></script>
-    <script src="./forms.js"></script>
+    <script defer src="./scripts/app.js"></script>
+    <script src="./scripts/loading.js"></script>
+    <script src="./scripts/forms.js"></script>
+    <script src="./scripts/menu.js"></script>
   </body>
 </html>

@@ -22,6 +22,18 @@
   --blue-700: #023e8a;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar, ::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-700);
+}
+
 * {
   padding: 0;
   margin: 0;
